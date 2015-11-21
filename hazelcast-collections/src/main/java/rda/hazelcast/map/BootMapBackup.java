@@ -9,16 +9,12 @@ import rda.hazelcast.SomeData;
 
 public class BootMapBackup {
 
-    public static final String NAME = BootMapBackup.class.getCanonicalName();
+    static final String NAME = BootMapBackup.class.getCanonicalName();
 
-    static HazelcastInstance hazelcastInstance;
+    HazelcastInstance hazelcastInstance;
     IMap<String, SomeData> datas;
 
     public BootMapBackup() {
-        datas = hazelcastInstance.getMap(NAME);
-    }
-
-    public static void main(String[] args) {
         MapConfig mapConfig = new MapConfig();
         mapConfig.setName(NAME);
 
@@ -33,6 +29,10 @@ public class BootMapBackup {
         config.addMapConfig(mapConfig);
 
         hazelcastInstance = Hazelcast.newHazelcastInstance(config);
+        datas = hazelcastInstance.getMap(NAME);
+    }
+
+    public static void main(String[] args) {
 
         BootMapBackup bootMap = new BootMapBackup();
 
