@@ -1,4 +1,4 @@
-package rda.hazelcast.map;
+package rda.hazelcast.data.map;
 
 import com.hazelcast.core.Hazelcast;
 import com.hazelcast.core.HazelcastInstance;

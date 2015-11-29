@@ -1,4 +1,4 @@
-package rda.hazelcast.map;
+package rda.hazelcast.data.map;
 
 import com.hazelcast.config.Config;
 import com.hazelcast.config.MapConfig;
