@@ -34,7 +34,7 @@ public class BootCountDownLatch {
                 Thread.sleep(10000);
                 System.out.println("Finished");
                 latch.countDown();
-                latch.destroy();
+//                latch.destroy();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
